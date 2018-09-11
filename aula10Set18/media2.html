@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<div id="entradas">
+  <input type="text" name="nota1" id="nota1">
+  <input type="text" name="nota2" id="nota2">
+  <button onclick="calcula()">Calcular</button>
+</div>
+
+<div id="saida">
+  
+</div>
+<script type="text/javascript">
+  //DEFINICAO DE VARIAVEL
+function calcula(){
+  var nota1;
+  var nota2;
+  var soma;
+  var media;
+  //PEDIR QUE USUARIO INFORME NOTA1 E NOTA2
+  nota1 = document.getElementById("nota1").value;
+  nota2 = document.getElementById("nota2").value;
+  //SOMAR AS NOTAS - TRANSFORMA EM FLOAT
+  soma = parseFloat(nota1) + parseFloat(nota2);
+  console.log("a soma deu " + soma);
+  //MEDIA = DIVIDIR A SOMA POR 2
+  media = soma/2;
+  console.log("a media deu " + media);
+  //TESTE - SE A MEDIA FOR < 7 - REPROVADO
+  if(media < 7){
+  	document.getElementById("saida").innerHTML = 
+ "Sua média é: "+ media +" Situação: Reprovado";
+  //SENAO - APROVADO
+    }else{
+    document.getElementById("saida").innerHTML = "Sua média é: "+ media +" Situação: Aprovado";
+
+  }
+}
+
+
+
+
+
+</script>
+</body>
+</html>

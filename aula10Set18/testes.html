@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+function calcular(){ //INÍCIO DA FUNCAO	
+  //DEFINICAO DE VARIAVEL
+  var nota1;
+  var nota2;
+  var soma;
+  var media;
+  //PEDIR QUE USUARIO INFORME NOTA1 E NOTA2
+  nota1 = window.prompt("Informe nota 1:");
+  nota2 = window.prompt("Informe nota 2:");
+  //SOMAR AS NOTAS - TRANSFORMA EM FLOAT
+  soma = parseFloat(nota1) + parseFloat(nota2);
+  console.log("a soma deu " + soma);
+  //MEDIA = DIVIDIR A SOMA POR 2
+  media = soma/2;
+  console.log("a media deu " + media);
+  //TESTE - SE A MEDIA FOR < 7 - REPROVADO
+  if(media < 7){
+  	//MUDAR O HTML DENTRO DE UM ELEMENTO
+  	var div = document.getElementById("resultado");
+  	div.innerHTML = "Sua média é: "+ media +" Situação: Reprovado";
+  //SENAO - APROVADO
+  }else{
+  	var div = document.getElementById("resultado");
+  	div.innerHTML = "Sua média é: "+ media +" Situação: Aprovado";
+
+  }
+}// FINAL DA FUNÇÃO
+
+</script>
+<!-- BOTAO HTML - ao clicar chama a funcao JS-->
+  <button onclick="calcular()">OK</button>
+  <div id="resultado">
+  	<!-- AQUI SERÁ APRESENTADO O RESULTADO -->
+  </div>
+</body>
+</html>
