@@ -1,0 +1,11 @@
+.flex-container{
+	background-color: lightblue;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.flex-container div{
+	margin: 5px;
+	background-color: #f1f1f1;
+	width: 300px;
+}

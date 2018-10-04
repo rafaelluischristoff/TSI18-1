@@ -1,0 +1,59 @@
+body{
+	overflow: hidden;
+}
+.corpo, header, footer, .colunas{
+	border: 1px solid black;
+}
+
+header, footer {
+	background-color: lightblue;
+}
+
+.corpo{
+	/*container flex*/
+	display: flex;
+	/*altura minima 100% da altura do viewport*/
+	min-height: 100vh;
+	/*itens em coluna*/
+	flex-direction: column;
+}
+
+.colunas{
+	display: flex;
+	/*combina flex-grow, flex-shrink e flex-basis*/
+	flex-grow: 1;
+}
+
+.principal{
+	flex:1;
+}
+
+.menu, .anuncios{
+  /* 12em é a largura das colunas */
+  flex: 0 0 12em;
+}
+
+.menu{
+	order: -1;
+}
+
+
+/*
+.colunas{
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 768px){
+	.colunas{
+		flex: 1; 
+		flex-direction: row;
+	}
+	.main{
+		flex: 1;
+	}
+	.menu, .anuncios{
+	  /* 12em é a largura das colunas */
+/*      flex: 0 0 12em;
+	}
+}
