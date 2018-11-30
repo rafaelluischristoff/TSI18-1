@@ -1,0 +1,250 @@
+/* Barra de rolagem */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+body {
+  margin: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Cabeçalho */
+
+header {
+  height: 200px;
+  }
+
+header img {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 660px;
+}
+
+header h1 {
+  display: flex;
+  font-size: 38px;
+  font-family: 'Rochester'; sans-serif;
+  margin-left: 480px;
+  margin-top: 20px;
+  color: black;
+}
+
+ .fundo {
+    margin: auto;
+    opacity: 0.1;
+}
+
+/* menu */
+
+.menu {
+  margin-top: 0;
+  width: 100%;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #63686e;
+  margin-top: 0;
+  margin-left: -1px;
+  font-family: 'Aclonica'; sans-serif;
+ }
+
+.menu li {
+  float: left;
+  text-align: center;
+}
+
+.menu li a {
+  text-align: center;
+  display: inline-block;
+  color: white;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 2s;
+}
+
+.menu li a:hover {
+  color: black;
+  background-color: white;
+  transition: 2s;
+}
+
+/* imagem início */
+
+.inicio img {
+  margin-top: 10px;
+  margin-left: -20px;
+}
+
+.inicio h2 {
+  margin-top: 5px;
+  margin-left: 610px;
+  font-family: 'Rochester', sans-serif;
+  font-size: 35px;
+  color: #99ddcc;
+}
+
+/* rodapé */
+
+.rodape {
+   display: flex; /* display flex relacionado ao flebox */
+   background-color: #63686e;
+   position: absolute;
+   width: 100%;
+   height: 100px;
+   margin-left: 0;
+   margin-top: 100px;
+}
+
+.rodape .strong {
+  display: flex;
+  color: black;
+  font-family: 'Rochester'; sans-serif;
+  font-size: 15px;
+  overflow: hidden;
+  margin-top: 30px;
+  margin-left: 540px;
+  padding: 15px 15px;
+}
+
+/* Galeria de Fotos */
+
+  .page-header, .page-footer h1{
+    width: 100%;
+    margin: 20px;
+    text-align: center; 
+    font-family: 'Rochester', sans-serif;
+    margin-left: 300px;
+    color: black;
+  }
+      @media (min-width: 800px) {
+        .page-header, .page-footer {
+          width: 800px;
+          padding: 0;
+        }
+      }
+    .page-header p {
+      margin-top: 20px;
+      font-size: .8em;
+    }
+.page-footer p {
+  color: #ccc;
+}
+.page-footer a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Final page style
+   !!Below this line, Gallery's code starts!!*/
+
+/* Slideshow container */
+.gallery-container {
+  width: 90%;
+  position: relative;
+  margin: 0 5%;
+  background: #63686e;
+  padding: 2px;
+}
+  @media (min-width: 480px) {
+      .gallery-container {
+        width: 800px;
+        margin: auto;
+      }
+  }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 35px;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Rochester', sans-serif;
+}
+
+.imgslide {
+  width: 100%;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-family: 'Rochester', sans-serif;
+}
+@media (max-width: 768px) {
+  .numbertext {
+    top: 15px;
+  }
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
